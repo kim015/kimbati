@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_music_app/love.dart';
 
 void main () {
   runApp(const MyApp());
@@ -103,7 +104,11 @@ class Homescreenstate extends State<Homescreen>{
           
            const SizedBox(height: 35,),
            SizedBox(width: double.infinity, height: 40, child: 
-           ElevatedButton(onPressed: (){},
+           ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context){
+              return Mother();
+            }));
+           },
            style: ElevatedButton.styleFrom(backgroundColor: Colors.lightBlue.shade200,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))), child:  const Text('continue'),),
            ),
            const SizedBox(height: 20,),

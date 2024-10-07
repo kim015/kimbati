@@ -72,7 +72,11 @@ class _DiscoverState extends State<Discover> {
     
       ),
       floatingActionButton:Padding(padding: const EdgeInsets.only(bottom: 30, right: 30),
-child: FloatingActionButton(onPressed: (){},
+child: FloatingActionButton(onPressed: (){
+  Navigator.push(context, MaterialPageRoute(builder: (context){
+    return Discover();
+  }));
+},
 backgroundColor: Colors.lightBlue,
 shape: const CircleBorder(), child: 
 const Icon(Icons.chevron_right, size: 35,),))
